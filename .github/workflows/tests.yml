@@ -26,5 +26,8 @@ jobs:
           java-version: 8
 
       - name: Runs old tests
-        run: cd new; ls 
-    
+        run: cd new; gradle test
+
+      - name: Runs test on old
+        run: cd master; gradle test
+      
