@@ -9,6 +9,7 @@ public class Coordinates {
     public Point getX() { return x; }
     
 
+
     
     private Point y;
     public void setY(Point value) { y = value; }
