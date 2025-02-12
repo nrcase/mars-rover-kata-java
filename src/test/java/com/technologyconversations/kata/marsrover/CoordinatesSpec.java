@@ -15,6 +15,7 @@ public class CoordinatesSpec {
     private Point y;
     private List<Obstacle> obstacles;
     private final Direction direction = Direction.NORTH;
+    
 
     @Before
     public void beforeCoordinatesTest() {
