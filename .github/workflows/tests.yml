@@ -16,10 +16,14 @@ jobs:
       - name: Checkout new
         uses: actions/checkout@v4
         with:
-          ref: test
+          ref: ${{ github.head_ref }}
           path: new
+          
+      - name: Setup Java
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: 7
 
-      - name: print source
-        run: echo ${{ github.head_ref }}
-      
-      
+      - name: Runs old tests
+        run: cd new | gradle test 
