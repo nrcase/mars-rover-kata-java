@@ -6,6 +6,7 @@ public class Obstacle {
     public int getX() {
         return x;
     }
+    
     public void setX(final int value) {
         x = value;
     }
