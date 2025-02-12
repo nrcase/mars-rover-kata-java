@@ -20,7 +20,7 @@ jobs:
           path: new
 
       - name: print source
-        run: echo ${{GITHUB_HEAD_REF}}
+        run: echo ${{ github.ref_name }}
       
       
         
