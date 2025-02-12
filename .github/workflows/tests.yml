@@ -23,7 +23,7 @@ jobs:
         uses: actions/setup-java@v4
         with:
           distribution: 'temurin'
-          java-version: 7
+          java-version: 8
 
       - name: Runs old tests
         run: cd new | gradle test 
