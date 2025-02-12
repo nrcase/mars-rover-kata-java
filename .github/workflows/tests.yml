@@ -16,7 +16,7 @@ jobs:
       - name: Checkout new
         uses: actions/checkout@v4
         with:
-          ref: 'github.head_ref'
+          ref: $ {{ github.ref }}
           path: new
 
       
