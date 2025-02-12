@@ -7,7 +7,10 @@ public class Coordinates {
     private Point x;
     public void setX(Point value) { x = value; }
     public Point getX() { return x; }
+    
 
+
+    
     private Point y;
     public void setY(Point value) { y = value; }
     public Point getY() { return y; }
