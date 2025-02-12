@@ -1,4 +1,4 @@
-name: prettier-check
+name: tests
 
 on:
   pull_request:
@@ -13,6 +13,13 @@ jobs:
         with:
           path: master
           
+      - name: Checkout new
+        uses: actions/checkout@v4
+        with:
+          ref: new-tests
+          path: new
+
+      - name: print source
+        run: echo ${{ github.ref_name }}
       
       
-        
