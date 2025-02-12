@@ -6,6 +6,7 @@ Method receiveCommands should be used to transmit commands to the rover.
 public class Rover {
 
     private Coordinates coordinates;
+    
     public void setCoordinates(Coordinates value) {
         coordinates = value;
     }
