@@ -26,4 +26,4 @@ jobs:
           java-version: 8
 
       - name: Runs old tests
-        run: ls
+        run: cd new | ls 
