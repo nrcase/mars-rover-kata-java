@@ -13,12 +13,6 @@ jobs:
         with:
           path: master
           
-      - name: Checkout new
-        uses: actions/checkout@v4
-        with:
-          ref: $ {{ github.ref }}
-          path: new
-
       
       
         
