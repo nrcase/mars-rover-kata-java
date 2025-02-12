@@ -2,6 +2,7 @@ package com.technologyconversations.kata.marsrover;
 
 public class Obstacle {
 
+    
     private int x;
     public int getX() {
         return x;
