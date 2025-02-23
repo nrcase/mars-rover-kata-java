@@ -37,10 +37,10 @@ jobs:
          echo 'sourceSets {
             main {
               java {
-                srcDirs = ["src/main/java"]
+                srcDirs = ["/home/runner/work/mars-rover-kata-java/mars-rover-kata-java/master/src/main/java"]
               }
               resources {
-                srcDirs = ["src/main/resources"]
+                srcDirs = ["/home/runner/work/mars-rover-kata-java/mars-rover-kata-java/master/src/main/resources"]
               }
             }
           }' | sed -i '/repositories {/i sourceSets {\n  main {\n    java {\n      srcDirs = ["src/main/java"]\n    }\n    resources {\n      srcDirs = ["src/main/resources"]\n    }\n  }\n}' build.gradle
