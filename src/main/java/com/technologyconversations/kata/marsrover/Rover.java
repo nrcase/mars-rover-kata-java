@@ -32,10 +32,10 @@ public class Rover {
             case 'B':
                 return getCoordinates().moveBackward();
             case 'L':
-                getCoordinates().changeDirectionLeft();
+                getCoordinates().changeDirectionRight();
                 return true;
             case 'R':
-                getCoordinates().changeDirectionRight();
+                getCoordinates().changeDirectionLeft();
                 return true;
             default:
                 throw new Exception("Command " + command + " is unknown.");

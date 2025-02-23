@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.technologyconversations.kata.marsrover.RoverSpec" tests="6" skipped="0" failures="0" errors="0" timestamp="2025-02-23T18:00:27" hostname="Nicks-MacBook-Air-2.local" time="0.007">
+  <properties/>
+  <testcase name="receiveSingleCommandShouldMoveBackwardWhenCommandIsB" classname="com.technologyconversations.kata.marsrover.RoverSpec" time="0.001"/>
+  <testcase name="newInstanceShouldSetRoverCoordinatesAndDirection" classname="com.technologyconversations.kata.marsrover.RoverSpec" time="0.002"/>
+  <testcase name="receiveCommandsShouldStopWhenObstacleIsFound" classname="com.technologyconversations.kata.marsrover.RoverSpec" time="0.0"/>
+  <testcase name="receiveSingleCommandShouldMoveForwardWhenCommandIsF" classname="com.technologyconversations.kata.marsrover.RoverSpec" time="0.0"/>
+  <testcase name="receiveSingleCommandShouldThrowExceptionWhenCommandIsUnknown" classname="com.technologyconversations.kata.marsrover.RoverSpec" time="0.003"/>
+  <testcase name="positionShouldReturnNokWhenObstacleIsFound" classname="com.technologyconversations.kata.marsrover.RoverSpec" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
