@@ -8,6 +8,7 @@ public class Rover {
     private Coordinates coordinates;
 
 
+
     public void setCoordinates(Coordinates value) {
         coordinates = value;
     }
