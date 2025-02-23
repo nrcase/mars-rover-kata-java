@@ -6,9 +6,11 @@ Method receiveCommands should be used to transmit commands to the rover.
 public class Rover {
 
     private Coordinates coordinates;
+
     public void setCoordinates(Coordinates value) {
         coordinates = value;
     }
+
     public Coordinates getCoordinates() {
         return coordinates;
     }
@@ -26,16 +28,16 @@ public class Rover {
     }
 
     public boolean receiveSingleCommand(char command) throws Exception {
-        switch(Character.toUpperCase(command)) {
+        switch (Character.toUpperCase(command)) {
             case 'F':
                 return getCoordinates().moveForward();
             case 'B':
                 return getCoordinates().moveBackward();
             case 'L':
-                getCoordinates().changeDirectionRight();
+                getCoordinates().changeDirectionLeft();
                 return true;
             case 'R':
-                getCoordinates().changeDirectionLeft();
+                getCoordinates().changeDirectionRight();
                 return true;
             default:
                 throw new Exception("Command " + command + " is unknown.");
