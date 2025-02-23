@@ -24,10 +24,25 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: 8
+          
+      - name: Check file path
+        run: pwd
 
-      - name: Runs old tests
+      - name: Run new branch
         run: cd new; gradle test
 
-      - name: Runs test on old
-        run: cd master; gradle test
+      - name: Setup running old on old Code
+        run: |
+         cd master
+         echo 'sourceSets {
+            main {
+              java {
+                srcDirs = ["src/main/java"]
+              }
+              resources {
+                srcDirs = ["src/main/resources"]
+              }
+            }
+          }' | sed -i '/repositories {/i sourceSets {\n  main {\n    java {\n      srcDirs = ["src/main/java"]\n    }\n    resources {\n      srcDirs = ["src/main/resources"]\n    }\n  }\n}' build.gradle
+
       
