@@ -26,7 +26,7 @@ jobs:
           java-version: 8
           
       - name: Check file path
-        run: pwd
+        run: cd master; pwd
 
       - name: Run new branch
         run: cd new; gradle test
