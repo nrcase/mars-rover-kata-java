@@ -31,16 +31,7 @@ jobs:
       - name: Setup running old on old Code
         run: |
          cd new
-         echo 'sourceSets {
-            main {
-              java {
-                srcDirs = ["/home/runner/work/mars-rover-kata-java/mars-rover-kata-java/master/src/main/java"]
-              }
-              resources {
-                srcDirs = ["/home/runner/work/mars-rover-kata-java/mars-rover-kata-java/master/src/main/resources"]
-              }
-            }
-          }' | sed -i '/repositories {/i sourceSets {\n  main {\n    java {\n      srcDirs = ["src/main/java"]\n    }\n    resources {\n      srcDirs = ["src/main/resources"]\n    }\n  }\n}' build.gradle
+         sed -i '/repositories {/i sourceSets {\n  main {\n    java {\n      srcDirs = ["/home/runner/work/mars-rover-kata-java/mars-rover-kata-java/master/src/main/java"]\n    }\n    resources {\n      srcDirs = ["/home/runner/work/mars-rover-kata-java/mars-rover-kata-java/master/src/main/resources"]\n    }\n  }\n}' build.gradle
 
       - name: Check gradle file
         run: cd new; cat build.gradle
