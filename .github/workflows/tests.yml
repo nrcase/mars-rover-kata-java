@@ -41,7 +41,10 @@ jobs:
               }
             }
           }' | sed -i '/repositories {/i sourceSets {\n  main {\n    java {\n      srcDirs = ["src/main/java"]\n    }\n    resources {\n      srcDirs = ["src/main/resources"]\n    }\n  }\n}' build.gradle
-          
+
+      - name: Check gradle file
+        run: cd new; cat build.gradle
+        
       - name: Run new branch on master
         run: cd new; gradle test
 
