@@ -36,7 +36,7 @@ jobs:
       - name: Check gradle file
         run: cd new; cat build.gradle
         
-      - name: Run new branch on master
-        run: cd new; gradle test
+      - name: Run new branch tests on master
+        run: cd new; gradle test clean
 
       
