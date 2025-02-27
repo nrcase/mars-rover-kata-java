@@ -37,6 +37,6 @@ jobs:
         run: cd new; cat build.gradle
         
       - name: Run new branch tests on master
-        run: cd new; gradle test clean --rerun-tasks
+        run: cd new; gradle test clean --rerun-tasks --no-build-cache
 
       
