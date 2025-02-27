@@ -16,6 +16,7 @@ public class Rover {
 
 
 
+
     public void setCoordinates(Coordinates value) {
         coordinates = value;
     }
