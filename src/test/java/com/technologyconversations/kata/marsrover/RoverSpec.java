@@ -81,4 +81,64 @@ public class RoverSpec {
         assertThat(rover.getPosition()).endsWith(" NOK");
     }
 
+    @Test
+    public void positionShouldReturnXYAndDirection() throws Exception {
+
+        rover.receiveCommands("LFFFRFF");
+
+        assertThat(rover.getPosition()).isEqualTo("8 X 4 N");
+
+    }
+
+    @Test
+    public void receiveCommandsShouldBeAbleToReceiveMultipleCommands() throws Exception {
+
+        int expected = x.getLocation() + 1;
+
+        rover.receiveCommands("RFR");
+
+        assertThat(rover.getCoordinates().getX().getLocation()).isEqualTo(expected);
+
+        assertThat(rover.getCoordinates().getDirection()).isEqualTo(Direction.SOUTH);
+
+    }
+
+    @Test
+    public void receiveCommandShouldWhatFromOneEdgeOfTheGridToAnother() throws Exception {
+
+        int expected = x.getMaxLocation() + x.getLocation() - 2;
+
+        rover.receiveCommands("LFFF");
+
+        assertThat(rover.getCoordinates().getX().getLocation()).isEqualTo(expected);
+
+    }
+
+    @Test
+    public void receiveSingleCommandShouldTurnLeftWhenCommandIsL() throws Exception {
+
+        rover.receiveSingleCommand('L');
+
+        assertThat(rover.getCoordinates().getDirection()).isEqualTo(Direction.WEST);
+
+    }
+
+    @Test
+    public void receiveSingleCommandShouldTurnRightWhenCommandIsR() throws Exception {
+
+        rover.receiveSingleCommand('R');
+
+        assertThat(rover.getCoordinates().getDirection()).isEqualTo(Direction.EAST);
+
+    }
+
+    @Test
+    public void receiveSingleCommandShouldIgnoreCase() throws Exception {
+
+        rover.receiveSingleCommand('r');
+
+        assertThat(rover.getCoordinates().getDirection()).isEqualTo(Direction.EAST);
+
+    }
+
 }
