@@ -31,10 +31,14 @@ jobs:
       - name: Setup running old on old Code
         run: |
          cd new
-         sed -i '/repositories {/i sourceSets {\n  main {\n    java {\n      srcDirs = ["/home/runner/work/mars-rover-kata-java/mars-rover-kata-java/master/src/main/java"]\n    }\n    resources {\n      srcDirs = ["/home/runner/work/mars-rover-kata-java/mars-rover-kata-java/master/src/main/resources"]\n    }\n  }\n}' build.gradle
+         sed -i '/repositories {/i sourceSets {\n  main {\n    java {\n      srcDirs = ["/home/runner/work/mars-rover-kata-java/mars-rover-kata-java/master/src/"]\n    }\n    resources {\n      srcDirs = ["/home/runner/work/mars-rover-kata-java/mars-rover-kata-java/master/resources"]\n    }\n  }\n}' build.gradle
 
       - name: Check gradle file
         run: cd new; cat build.gradle
+        
+      - name: Check source Code
+        run: cd master/src/main/java/
+      
         
       - name: Run new branch tests on master
         run: cd new; gradle test --rerun-tasks --no-build-cache
