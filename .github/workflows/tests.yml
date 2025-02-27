@@ -37,8 +37,7 @@ jobs:
         run: cd new; cat build.gradle
         
       - name: Check source Code
-        run: cd master/src/main/java/
-      
+        run: cd master/src/main/java/com/technologyconversations/kata/marsrover; cat Rover.java
         
       - name: Run new branch tests on master
         run: cd new; gradle test --rerun-tasks --no-build-cache
