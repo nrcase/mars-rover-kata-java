@@ -26,7 +26,7 @@ jobs:
           java-version: 8
 
       - name: Run new branch
-        run: cd new; gradle test clean --rerun-tasks
+        run: cd new; gradle test clean
 
       - name: Setup running old on old Code
         run: |
@@ -37,6 +37,6 @@ jobs:
         run: cd new; cat build.gradle
         
       - name: Run new branch tests on master
-        run: cd new; gradle test clean --rerun-tasks --no-build-cache
+        run: cd new; gradle test --rerun-tasks --no-build-cache
 
       
