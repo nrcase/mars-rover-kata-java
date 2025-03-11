@@ -19,7 +19,6 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
           path: new
-          fetch-depth: 0
           
       - name: Setup Java
         uses: actions/setup-java@v4
