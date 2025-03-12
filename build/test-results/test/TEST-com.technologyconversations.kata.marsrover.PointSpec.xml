@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.technologyconversations.kata.marsrover.PointSpec" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-02-23T18:00:26" hostname="Nicks-MacBook-Air-2.local" time="0.001">
+<testsuite name="com.technologyconversations.kata.marsrover.PointSpec" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-03-12T19:43:19" hostname="Nicks-MacBook-Air-2.local" time="0.001">
   <properties/>
   <testcase name="newInstanceShouldSetLocationAndMaxLocationParams" classname="com.technologyconversations.kata.marsrover.PointSpec" time="0.0"/>
   <testcase name="getBackwardLocationShouldDecreasePointValueByOne" classname="com.technologyconversations.kata.marsrover.PointSpec" time="0.0"/>
-  <testcase name="getForwardLocationShouldSetValueToZeroIfMaxLocationIsPassed" classname="com.technologyconversations.kata.marsrover.PointSpec" time="0.0"/>
+  <testcase name="getForwardLocationShouldSetValueToZeroIfMaxLocationIsPassed" classname="com.technologyconversations.kata.marsrover.PointSpec" time="0.001"/>
   <testcase name="getForwardLocationShouldIncreasePointValueByOne" classname="com.technologyconversations.kata.marsrover.PointSpec" time="0.0"/>
   <testcase name="getBackwardLocationShouldSetValueToMaxLocationIfZeroLocationIsPassed" classname="com.technologyconversations.kata.marsrover.PointSpec" time="0.0"/>
   <system-out><![CDATA[]]></system-out>

@@ -119,5 +119,5 @@ public class CoordinatesSpec {
         String expected = x.getLocation() + " X " + y.getLocation() + " " + direction.getShortName();
         assertThat(coordinates.toString()).isEqualTo(expected);
     }
-
+    
 }
