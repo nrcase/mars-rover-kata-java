@@ -119,6 +119,7 @@ public class RoverSpec {
         rover.receiveSingleCommand('r');
         assertThat(rover.getCoordinates().getDirection()).isEqualTo(Direction.EAST);
     }
-    
+
+
 
 }
