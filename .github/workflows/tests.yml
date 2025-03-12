@@ -36,6 +36,13 @@ jobs:
          cd ..
         
       - name: Run new branch tests on master
-        run: cd new; gradle test --rerun-tasks --no-build-cache; echo "::error::New Tests fail on Master Branch" && exit 24
+        run: |
+          cd new
+          if ! gradle test --rerun-tasks --no-build-cache; then
+            echo "::error::New Tests fail on Master Branch"
+            exit 5
+          fi
+
+      
 
       
